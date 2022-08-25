@@ -1,19 +1,10 @@
 import logging
-import pandas as pd
-import numpy as np
-from statistics import mode
-from sklearn.metrics import classification_report, confusion_matrix
-import time
 
 #Import py files:
 import sys
-
 sys.path.append('./')
-
-from functions import gen_pipeline
 from functions.cnn import CNN
 from functions.data_wrapper import DataWrapper
-from functions.misc_func import unpack_label
 
 import tensorflow as tf
 tf.config.optimizer.set_experimental_options({'layout_optimizer': False})

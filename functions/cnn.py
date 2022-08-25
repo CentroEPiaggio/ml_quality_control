@@ -1,11 +1,10 @@
-from audioop import cross
 import logging
 import tensorflow as tf
-from tensorflow.keras import layers, optimizers, models, callbacks, regularizers, Sequential
+from tensorflow.keras import layers, optimizers, callbacks, regularizers
 from keras import backend as K
 from keras.utils.layer_utils import count_params
 
-from sklearn.model_selection import KFold, StratifiedKFold, train_test_split
+from sklearn.model_selection import StratifiedKFold, train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 import numpy as np
 
@@ -13,8 +12,6 @@ import sys
 sys.path.append('./')
 from functions.misc_func import format_records
 from functions import gen_pipeline
-
-tf.get_logger().setLevel('ERROR')
 
 class CNN():
 

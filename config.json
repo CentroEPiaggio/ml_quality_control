@@ -1,0 +1,21 @@
+{
+    "shared": {
+        "master_path": "./data/master.csv",
+        "input_shape": [128, 256, 1],
+        "seed": 123,
+        "N": 90,
+        "bs": 128,
+        "add_data": ["infill"]
+    },
+
+    "cnn_model": {
+        "model_conf": "simple",
+        "depth": 6,
+        "init_fs": 8,
+        "reg_conf": "none",
+        "reg_val": 1e-2,
+        "lr": 1e-3,
+        "epochs": 50,
+        "early_stop": 20
+    }
+}
